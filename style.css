@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root{
+    --celeste: #1ba0ab;
+    --verde: #2dc071;
+    --azul: #8ec2f2;
+    --gris: #737373;
+    --morado: #26335d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e6e0e0ef;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body, 
+main {
+    display: grid;
+    flex-basis: 100%;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    min-height: calc(1vh * 100);
+    margin: 0 auto;
+    font-weight: 600;
+    justify-content: center;
+    font-size: 12.5px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1024px;
+}
+
+article{
+    width: calc(100% - 40px);
+    text-align: center;
+    margin: 10px;
+}
+
+article div {
+    padding: 30px;
+}
+
+article.carta{
+    background-color: white;
+    box-shadow: 0px 13px 19px rgb(0, 0, 0, 0.07);
+}
+
+article.carta-2{
+    background-color: var(--morado);
+    color: white;
+    position: relative;
+}
+
+article.carta-2::after{
+    content: 'New';
+    background-color: #e77c40;
+    position: absolute;
+    top: -15px;
+    right: -7px;
+    width: 65px;
+    height: 65px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+article.precio{
+    font-size: 40px;
+    color: var(--celeste);
+    font-weight: 700;
+}
+
+article p{
+    color: var(--gris);
+}
+
+article.mes{
+    font-size: 14px;
+    color: var(--azul);
+    font-weight: 600;
+}
+
+article button{
+    background-color: var(--celeste);
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.servicios{
+    margin-left: -35px;
+}
+
+.servicios span{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2px 0px;
+    color: var(--gris);
+}
+
+/* responsive table */
+
+@media (min-width: 760px){
+    article{
+        width: calc(50% - 40px);
+    }
+}
